@@ -141,7 +141,7 @@ a {
 }
 
 .codrops-demos a:hover {
-	color: #000;
+	color: #8888;
 	border-color: #000;
 }
 
@@ -154,7 +154,7 @@ a {
 
 @media screen and (max-width: 730px){
 	.fleft {
-		width: 100%;
+		width: 1%;
 		float: none;
 		text-align: center;
 	}
