@@ -1,0 +1,200 @@
+/* null margins and padding to give good cross-browser baseline */
+html, body, address, blockquote, div, 
+form, fieldset, caption, 
+h1, h2, h3, h4, h5, h6, 
+hr, ul, li, ol, ul, dl, dt, dd, 
+table, tr, td, th, p, img {
+	margin:0;
+	padding:0;
+	
+}
+
+img,  fieldset {
+	border:none;
+	
+}
+
+* {
+	box-sizing:border-box;
+}
+
+hr {
+	display:none;
+	/*
+		HR in my code are for semantic breaks in topic/section,  NOT
+		style/presenation,  so hide them from screen.css users
+	*/
+}
+
+@media (max-width:480px) {
+	/* Fix for pre "viewport <meta>" mobile browsers */
+	* {
+		-webkit-text-size-adjust:none;
+		-ms-text-size-adjust:none;
+	}
+}
+
+html,  body {
+	height:100%;
+}
+
+body,  button,  input,  table,  textarea,  select {
+	font:normal 1em/1.5 arial, helvetica, sans-serif;
+}
+
+#fauxInner {
+	display:flex;
+	flex-direction:column;
+	min-height:100%;
+	background:hsl(220, 100%, 95%);
+}
+
+#fauxInner > header, 
+#fauxInner > footer {
+	flex:0 0 auto;
+	display:flex;
+	flex-wrap:wrap;
+	padding:1em;
+	background:hsl(220, 100%, 90%);
+}
+
+#fauxInner > header {
+	align-items:center;
+	border-bottom:1px solid hsl(220, 100%, 60%);
+}
+
+#fauxInner > footer {
+	align-items:top;
+	border-top:1px solid hsl(220, 100%, 60%);
+}
+
+#fauxInner > header > section,
+#fauxInner > footer > section {
+	flex:1 0 auto;
+}
+
+#fauxInner > footer section:last-child {
+	text-align:right;
+}
+
+#fauxInner > footer h2 {
+	font-size:1.25em;
+}
+
+
+main {
+	flex:1 0 auto;
+	max-width:48em;
+	margin:0 auto;
+	padding:1.5em;
+}
+
+h1 {
+	flex:5 0 auto;
+	font-size:1.5em;
+	display: flex;
+  align-items: center
+}
+
+main h2 {
+	font-size:1.5em;
+	line-height:1.2em;
+	margin-bottom:0.33em;
+}
+
+p {
+	padding-bottom:1.5em;
+}
+
+#mainMenu {
+	flex:0 0 auto;
+}
+
+#mainMenu ul {
+	display:flex;
+	align-items:center;
+	justify-content:end;
+}
+
+#mainMenu li {
+	list-style:none;
+	margin-left:1.5em;
+}
+
+#mainMenu li a {
+	display:inline-block;
+	padding:0.25em 0;
+	text-decoration:none;
+	color:#048;
+	transition:transform 0.3s, color 0.3s;
+}
+
+#mainMenu li a:focus,
+#mainMenu li a:hover {
+	color:#000;
+	transform:scale(1.2);
+}
+
+fieldset {
+	padding-bottom:1em;
+}
+
+fieldset input,
+.submitsAndHiddens button {
+	border:1px solid #0006;
+	border-radius:0.25em;
+}
+
+fieldset input {
+	padding:0.25em 0.5em;
+}
+
+fieldset > label input {
+	width:100%;
+	margin:0.25em 0 0.5em;
+}
+
+.submitsAndHiddens {
+	text-align:center;
+}
+
+.submitsAndHiddens button {
+	padding:0.25em 1em;
+	background:#0481;
+	color:#000;
+	transition:background 0.3s;
+}
+
+.submitsAndHiddens button:focus,
+.submitsAndHiddens button:hover {
+	background:#0483;
+}
+
+#fauxInner > footer ul {
+	list-style:none;
+}
+
+#fauxInner > footer a {
+	text-decoration:none;
+	color:#048C;
+}
+
+#fauxInner > footer a:focus,
+#fauxInner > footer a:hover {
+	text-decoration:underline;
+	color:#000E;
+}
+
+@media (max-width:38em) {
+	#fauxInner > footer {
+		display:block;
+	}
+	#fauxInner > footer section {
+		padding-bottom:1.5em;
+		text-align:center;
+	}
+	#fauxInner > footer section:last-child {
+		text-align:center;
+		padding-bottom:0;
+	}
+}
